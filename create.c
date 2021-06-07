@@ -1,11 +1,12 @@
 // C program to create a Linked List
+
 #include <stdio.h>
 #include <stdlib.h>
 
 /* Structure of a node */
 struct node {
-    int data;          // Data 
-    struct node *next; // Address 
+    int data;          // Data
+    struct node *next; // Address
 }*head;
 
 
@@ -22,6 +23,7 @@ int main()
     showList();
     return 0;
 }
+
 //Create a list of n nodes
 void createList(int n)
 {
@@ -61,7 +63,7 @@ void createList(int n)
         scanf("%d", &data);
 
         newNode->data = data; // Link data field of newNode
-        newNode->next = NULL; // Make sure new node points to NULL 
+        newNode->next = NULL; // Make sure new node points to NULL
 
         temp->next = newNode; // Link previous node with newNode
         temp = temp->next;    // Make current node as previous node
@@ -71,13 +73,13 @@ void createList(int n)
 void showList()
 {
     struct node *temp;
-    // Return if list is empty 
+    // Return if list is empty
     if(head == NULL)
     {
         printf("List is empty.");
         return;
     }
-    
+
     temp = head;
     while(temp != NULL)
     {
